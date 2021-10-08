@@ -1,1 +1,0 @@
-# helaglobal.github.io
