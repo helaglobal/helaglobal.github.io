@@ -588,7 +588,7 @@ h6, .h6, .fz-6 { font-size: 0.94rem; }
 
 .bg-theme-grad { background-image: linear-gradient(to right, #4936b5 0%, #5d46e8 100%) !important; }
 
-.bg-theme-grad-alt { background-image: linear-gradient(180deg, rgba(3,44,166,1) 0%, rgba(140,13,157,1) 0%, rgba(0,255,209,1) 100%) !important; }
+.bg-theme-grad-alt { background-image: linear-gradient(180deg, rgba(0,184,74,1) 0%, rgba(60,197,255,1) 100%) !important; }
 
 .bg-theme-grad-s2 { background-image: linear-gradient(135deg, #4936b5 0%, #5d46e8 100%) !important; }
 
