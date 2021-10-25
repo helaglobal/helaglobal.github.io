@@ -8,7 +8,7 @@ try {
   const wasAdded = await ethereum.request({
     method 'wallet_watchAsset',
     params {
-      type 'BSC20',  Initially only supports ERC20, but eventually more!
+      type 'ERC20',  Initially only supports ERC20, but eventually more!
       options {
         address tokenAddress,  The address that the token is at.
         symbol tokenSymbol,  A ticker symbol or shorthand, up to 5 chars.
