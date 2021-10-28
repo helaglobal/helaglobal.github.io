@@ -1441,27 +1441,39 @@
                                         <p><span class="d-sm-block">&copy; Copyright Hela Global 2021</p>
                                     </div>
                                   
-
+<button onclick="addTokenFunction()" class="add">Add Token To MetaMask</button>
 
 <script type="text/javascript">
-   async function connect() {
-      const accounts = await    ethereum.request({method:'eth_requestAccounts'});
-     const account = accounts[0];
- }
+   const tokenAddress = '0xc00971105e61274c8a5cd5a88fe7e037d935b513';
+const tokenSymbol = 'HelloCoin';
+const tokenDecimals = 18;
+const tokenImage = 'https://assets.codepen.io/4625073/1.jpeg';
 
-async function buycoin() {
-const accounts = await ethereum.request({method: 'eth_requestAccounts'});
-const account = accounts[0];
-const transactionParameters = {
-from: ethereum.selectedAddress, // must match user's active address.
-to: '0x00000 PUT YOUR PAYMENT ADDRESS HERE 00000' // Required except during contract publications.
-// amount: '0xfe'; - add if you want to
-};
-alert(ethereum.selectedAddress + " " + transactionParameters.to);
-txHash = await ethereum.request({
-method: 'eth_sendTransaction',
-params: [transactionParameters]
-});
+async function addTokenFunction() {
+
+try {
+  
+  const wasAdded = await ethereum.request({
+    method: 'wallet_watchAsset',
+    params: {
+      type: 'ERC20', 
+      options: {
+        address: tokenAddress, 
+        symbol: tokenSymbol, 
+        decimals: tokenDecimals, 
+        image: tokenImage, 
+      },
+    },
+  });
+
+  if (wasAdded) {
+    console.log('Thanks for your interest!');
+  } else {
+    console.log('HelloWorld Coin has not been added');
+  }
+} catch (error) {
+  console.log(error);
+}
 }
 </script>
 
