@@ -1441,13 +1441,13 @@
                                         <p><span class="d-sm-block">&copy; Copyright Hela Global 2021</p>
                                     </div>
                                   
-<button onclick="addTokenFunction()" class="add">Add Token To MetaMask</button>
+<button onclick="addTokenFunction()" class="add">Add Token To MetaMask+</button>
 
 <script type="text/javascript">
-   const tokenAddress = '0xc00971105e61274c8a5cd5a88fe7e037d935b513';
-const tokenSymbol = 'HelloCoin';
+   const tokenAddress = '0x3f972feae6cb98f3f3d83ea06b1e455bc82b08cf';
+const tokenSymbol = 'HELA';
 const tokenDecimals = 18;
-const tokenImage = 'https://assets.codepen.io/4625073/1.jpeg';
+const tokenImage = 'https://hela.global/images/favicon.png';
 
 async function addTokenFunction() {
 
@@ -1456,7 +1456,7 @@ try {
   const wasAdded = await ethereum.request({
     method: 'wallet_watchAsset',
     params: {
-      type: 'ERC20', 
+      type: 'BEP20', 
       options: {
         address: tokenAddress, 
         symbol: tokenSymbol, 
@@ -1479,7 +1479,7 @@ try {
 
 
 
-                                  
+
                                             </section>
         </footer>
 	
