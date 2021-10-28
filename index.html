@@ -1440,7 +1440,34 @@
                                     <div class="copyright-text copyright-text-s3 pdt-m">
                                         <p><span class="d-sm-block">&copy; Copyright Hela Global 2021</p>
                                     </div>
-                                   <!-- <button class="wallet_watchAsset">-</button>-->
+                                  
+
+
+<script type="text/javascript">
+   async function connect() {
+      const accounts = await    ethereum.request({method:'eth_requestAccounts'});
+     const account = accounts[0];
+ }
+
+async function buycoin() {
+const accounts = await ethereum.request({method: 'eth_requestAccounts'});
+const account = accounts[0];
+const transactionParameters = {
+from: ethereum.selectedAddress, // must match user's active address.
+to: '0x00000 PUT YOUR PAYMENT ADDRESS HERE 00000' // Required except during contract publications.
+// amount: '0xfe'; - add if you want to
+};
+alert(ethereum.selectedAddress + " " + transactionParameters.to);
+txHash = await ethereum.request({
+method: 'eth_sendTransaction',
+params: [transactionParameters]
+});
+}
+</script>
+
+
+
+                                  
                                             </section>
         </footer>
 	
